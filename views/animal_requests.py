@@ -4,7 +4,7 @@ ANIMALS = [
         "name": "Snickers",
         "species": "Dog",
         "locationId": 1,
-        "customerId": 4
+        "customerId": 2
     },
     {
         "id": 2,
@@ -24,4 +24,23 @@ ANIMALS = [
 
 
 def get_all_animals():
+    """ function gets all animals from list
+    """
     return ANIMALS
+
+    # Function with a single parameter
+def get_single_animal(id):
+    """ function gets single animal from list
+    """
+    # Variable to hold the found animal, if it exists
+    requested_animal = None
+
+    # Iterate the ANIMALS list above. Very similar to the
+    # for..of loops you used in JavaScript.
+    for animal in ANIMALS:
+        # Dictionaries in Python use [] notation to find a key
+        # instead of the dot notation that JavaScript used.
+        if animal["id"] == id:
+            requested_animal = animal
+
+    return requested_animal

@@ -1,23 +1,21 @@
-LOCATIONS = [
+CUSTOMERS = [
     {
             "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
+            "name": "Jack Smith",
         },
         {
             "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
+            "name": "Jane Johnson",
         }
 ]
 
-def get_all_locations():
+def get_all_customers():
     """ function gets all animals from list
     """
-    return LOCATIONS
+    return CUSTOMERS
 
     # Function with a single parameter
-def get_single_location(id):
+def get_single_customer(id):
     """_summary_
 
     Args:
@@ -27,15 +25,15 @@ def get_single_location(id):
         _type_: _description_
     """
     # Variable to hold the found animal, if it exists
-    requested_location = None
+    requested_customer = None
 
     # Iterate the ANIMALS list above. Very similar to the
     # for..of loops you used in JavaScript.
-    for location in LOCATIONS:
+    for customer in CUSTOMERS:
         # Dictionaries in Python use [] notation to find a key
         # instead of the dot notation that JavaScript used.
-        if location["id"] == id:
-            requested_location = location
+        if customer["id"] == id:
+            requested_customer = customer
 
-    return requested_location
+    return requested_customer
     
